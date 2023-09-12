@@ -91,7 +91,7 @@ if pdf_file is not None:
         question = st.text_input("Enter your question")
         combined_content = ''.join([p.page_content for p in pages])
         texts = text_splitter.split_text(combined_content)
-        embedding = OpenAIEmbeddings(openai_api_key = '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')
+        embedding = OpenAIEmbeddings(openai_api_key = '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')
         document_search = FAISS.from_texts(texts, embedding)
         chain = load_qa_chain(llm, chain_type="stuff")
         docs = document_search.similarity_search(question)
