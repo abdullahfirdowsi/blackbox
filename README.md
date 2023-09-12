@@ -1,14 +1,12 @@
 # Submitted to [HACK SUMMIT 4.0](https://aaruush.org/events/hack-summit)
 
-## Our Work
-    Currently, we deployed the generative AI model to provide answers to queries based on a PDF document's content, including its summary properties. It's crucial to keep in mind that general question-answering tasks are not the primary focus of generative AI models . Instead, they are intended for the production of human-like writing.
-    We'll create a virtual assistant in the future for engaging user experiences.
-
 ## PDF: QA and Summarizer
 The application employs generative AI models to process PDF content and provide responses,
 with Langchain components handling various tasks like text splitting and 
 document loading. It features a user-friendly interface with informative sidebars.
 
+## Our Work
+Currently, we deployed the generative AI model to provide answers to queries based on a PDF document's content, including its summary properties. It's crucial to keep in mind that general question-answering tasks are not the primary focus of generative AI models . Instead, they are intended for the production of human-like writing. We'll create a virtual assistant in the future for engaging user experiences.
 
 ## Usage
 1. Install the required dependencies by running `pip install streamlit dotenv PyPDF2 streamlit_extras langchain`
