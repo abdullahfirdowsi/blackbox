@@ -1,6 +1,6 @@
 # Submitted to [HACK SUMMIT 4.0](https://aaruush.org/events/hack-summit)
 
-## PDF: QA and Summarizer
+## PDF: Summarizer & QA
 The application employs generative AI models to process PDF content and provide responses,
 with Langchain components handling various tasks like text splitting and 
 document loading. It features a user-friendly interface with informative sidebars.
