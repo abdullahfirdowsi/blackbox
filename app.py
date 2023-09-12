@@ -22,7 +22,7 @@ from langchain.vectorstores import FAISS
 # This is a function from the Langchain library that loads a question-answering chain for generating answers to questions.
 from langchain.chains.question_answering import load_qa_chain 
 import openai
-llm = OpenAI(openai_api_key = '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', temperature=0.2)
+llm = OpenAI(openai_api_key = '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', temperature=0.2)
 # We need to split the text using Character Text Split such that it should not increase token size
 text_splitter = CharacterTextSplitter(
     separator = "\n",
@@ -91,7 +91,7 @@ if pdf_file is not None:
         question = st.text_input("Enter your question")
         combined_content = ''.join([p.page_content for p in pages])
         texts = text_splitter.split_text(combined_content)
-        embedding = OpenAIEmbeddings(openai_api_key = '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')
+        embedding = OpenAIEmbeddings(openai_api_key = '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')
         document_search = FAISS.from_texts(texts, embedding)
         chain = load_qa_chain(llm, chain_type="stuff")
         docs = document_search.similarity_search(question)
