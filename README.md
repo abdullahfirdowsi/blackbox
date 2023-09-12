@@ -5,15 +5,14 @@
     We'll create a virtual assistant in the future for engaging user experiences.
 
 ## PDF: QA and Summarizer
-This application is an LLM-powered chatbot that allows users to interact with PDF files using natural language queries. The chatbot is built using the following technologies:
+The application employs generative AI models to process PDF content and provide responses,
+with Langchain components handling various tasks like text splitting and 
+document loading. It features a user-friendly interface with informative sidebars.
 
-- [Streamlit](https://streamlit.io/): A Python library for creating web apps for data science and machine learning projects.
-- [LangChain](https://python.langchain.com/): A library for natural language processing tasks.
-- [OpenAI](https://platform.openai.com/docs/models): An LLM (Language Model) model used for question answering.
 
 ## Usage
 1. Install the required dependencies by running `pip install streamlit dotenv PyPDF2 streamlit_extras langchain`
-2. Create an environment file (`.env`) and set your OpenAI API key as `openai_api_key=YOUR_API_KEY`.
+2. Create an environment file (`.env`).
 3. Run the app by executing `streamlit run your_script.py`.
 4. In the app's sidebar, you'll find information about the Farmwise Ai chatbot and its components.
 5. Upload a PDF file by clicking the "Upload your PDF" button.
