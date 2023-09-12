@@ -18,6 +18,9 @@ Currently, we deployed the generative AI model to provide answers to queries bas
 7. The chatbot will then prompt you to ask questions about the PDF content using the text input field.
 8. Enter your question, and the chatbot will provide answers based on the content of the PDF using the OpenAI LLM model.
 
+## About
+The application employs generative AI models to process PDF content and provide responses, with Langchain components handling various tasks like text splitting and document loading. It features a user-friendly interface with informative sidebars.
+
 ## Dependencies
 - `streamlit`: 0.89.0
 - `dotenv`: 0.19.0
