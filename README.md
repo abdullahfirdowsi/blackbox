@@ -1,7 +1,7 @@
 # Submitted to [HACK SUMMIT 4.0](https://aaruush.org/events/hack-summit)
 
 ## Our Work
-    Currently, we deployed the generative AI model to provide answers to queries based on a PDF document's content, including its summary properties. It's crucial to keep in mind that general question-answering tasks are not the primary focus of generative AI models like GPT-3.5 Turbo, on which I am built. Instead, they are intended for the production of human-like writing.
+    Currently, we deployed the generative AI model to provide answers to queries based on a PDF document's content, including its summary properties. It's crucial to keep in mind that general question-answering tasks are not the primary focus of generative AI models . Instead, they are intended for the production of human-like writing.
     We'll create a virtual assistant in the future for engaging user experiences.
 
 ## PDF: QA and Summarizer
