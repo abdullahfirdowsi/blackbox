@@ -22,7 +22,7 @@ from langchain.vectorstores import FAISS
 # This is a function from the Langchain library that loads a question-answering chain for generating answers to questions.
 from langchain.chains.question_answering import load_qa_chain 
 import openai
-llm = OpenAI(openai_api_key = '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', temperature=0.2)
+llm = OpenAI(openai_api_key = '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', temperature=0.2)
 # We need to split the text using Character Text Split such that it should not increase token size
 text_splitter = CharacterTextSplitter(
     separator = "\n",
