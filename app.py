@@ -22,7 +22,7 @@ from langchain.vectorstores import FAISS
 # This is a function from the Langchain library that loads a question-answering chain for generating answers to questions.
 from langchain.chains.question_answering import load_qa_chain 
 import openai
-llm = OpenAI(openai_api_key = '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', temperature=0.2)
+llm = OpenAI(openai_api_key = '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', temperature=0.2)
 # We need to split the text using Character Text Split such that it should not increase token size
 text_splitter = CharacterTextSplitter(
     separator = "\n",
@@ -33,19 +33,18 @@ text_splitter = CharacterTextSplitter(
 
 with st.sidebar:
     st.title('BlackBox.AI')
-    st.markdown('''        
+    st.markdown('''       
+    ## PDF: Summarizer & QA
+    The application employs generative AI models to process PDF content and provide responses, with Langchain components handling various tasks like text splitting and document loading. It features a user-friendly interface with informative sidebars.
     ## Our Work
-    Currently, we deployed the generative AI model to provide answers to queries based on a PDF document's content, including its summary properties. It's crucial to keep in mind that general question-answering tasks are not the primary focus of generative AI models like GPT-3.5 Turbo, on which I am built. Instead, they are intended for the production of human-like writing.
+    Currently, we deployed the generative AI model to provide answers to queries based on a PDF document's content, including its summary properties. It's crucial to keep in mind that general question-answering tasks are not the primary focus of generative AI models . Instead, they are intended for the production of human-like writing.
     We'll create a virtual assistant in the future for engaging user experiences.
     ## About
-    This app is an LLM-powered chatbot built using:
-    - [Streamlit](https://streamlit.io/)
-    - [LangChain](https://python.langchain.com/)
-    - [OpenAI LLM model](https://platform.openai.com/docs/models) 
- 
-    ''')
+    The application employs generative AI models to process PDF content and provide responses,
+    with Langchain components handling various tasks like text splitting and 
+    document loading. It features a user-friendly interface with informative sidebars.''')
 
-st.title("PDF Summarizer & QA")
+st.title("PDF: Summarizer & QA")
 pdf_file = st.file_uploader("Choose a PDF file", type="pdf")
 if pdf_file is not None:
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
@@ -92,7 +91,7 @@ if pdf_file is not None:
         question = st.text_input("Enter your question")
         combined_content = ''.join([p.page_content for p in pages])
         texts = text_splitter.split_text(combined_content)
-        embedding = OpenAIEmbeddings(openai_api_key = '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')
+        embedding = OpenAIEmbeddings(openai_api_key = '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')
         document_search = FAISS.from_texts(texts, embedding)
         chain = load_qa_chain(llm, chain_type="stuff")
         docs = document_search.similarity_search(question)
